@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Продукты</h1>
+    {% for product in products %}
+        <div>
+            <h2>{{ product.title }}</h2>
+            <p>{{ product.description }}</p>
+            <p>{{ product.price }}</p>
+            <p>{{ product.category }}</p>
+            <img src="{{ product.image.url }}" alt = "">
+        </div>
+    {% endfor %}
+</body>
+</html>
